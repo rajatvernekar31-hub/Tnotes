@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Notes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Login Page -->
+  <div id="login-container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Enter Username">
+      <input type="password" id="password" placeholder="Enter Password">
+      <button id="loginBtn">Login</button>
+      <p id="loginError" class="error-msg"></p>
+    </div>
+  </div>
+
+  <!-- Notes App -->
+  <div id="app" class="hidden">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <span class="logo-icon">📒</span>
+        <span class="logo-text">My Notes</span>
+      </div>
+      <div class="nav-links">
+        <button id="allNotesBtn" class="active">All Notes</button>
+        <button id="favoritesBtn">Favorites ❤️</button>
+        <button id="addNoteBtn">+ Add Note</button>
+      </div>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search notes...">
+      </div>
+    </nav>
+
+    <!-- Notes Container -->
+    <div id="notesContainer" class="notes-grid"></div>
+  </div>
+
+  <!-- Add/Edit Note Modal -->
+  <div id="noteModal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modalTitle">Add Note</h3>
+      <input type="text" id="noteTitle" placeholder="Note Title">
+      <textarea id="noteContent" placeholder="Note Content"></textarea>
+      <div class="modal-actions">
+        <button id="saveNoteBtn">Save</button>
+        <button id="closeModalBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
